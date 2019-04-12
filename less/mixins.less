@@ -1,1 +1,11 @@
 // Mixins in here
+.box-dimensions(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+.content-adjust(@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
