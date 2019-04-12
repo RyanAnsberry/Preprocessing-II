@@ -1,7 +1,8 @@
 // Navigation Styles here
 nav{
-    padding: 0 10%;
-    .box-dimensions(120%, 80px);
+    box-sizing: content-box;
+    padding: 0 100%;
+    .box-dimensions(100%, 80px);
     .content-adjust(space-between, center);
     border-bottom:2px dashed @silver;
     .links {
@@ -15,6 +16,14 @@ nav{
             &:hover {
                 color: @eastern-blue;
             }
+        }
+    }
+    @media @mobile {
+        flex-direction: column;
+        height: 100px;
+        justify-content: space-evenly;
+        .links {
+            width: 100%;
         }
     }
 }

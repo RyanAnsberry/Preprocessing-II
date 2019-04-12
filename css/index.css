@@ -169,8 +169,9 @@ img {
   margin: 0 auto;
 }
 nav {
-  padding: 0 10%;
-  width: 120%;
+  box-sizing: content-box;
+  padding: 0 100%;
+  width: 100%;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -189,6 +190,16 @@ nav .links a {
 }
 nav .links a:hover {
   color: #17A2B8;
+}
+@media (max-width: 500px) {
+  nav {
+    flex-direction: column;
+    height: 100px;
+    justify-content: space-evenly;
+  }
+  nav .links {
+    width: 100%;
+  }
 }
 .footer {
   width: 100%;
@@ -221,9 +232,21 @@ nav .links a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-section {
+    flex-flow: column wrap;
+    align-items: center;
+  }
+}
 .home .content-section .text-content {
   width: 48%;
   padding-right: 1%;
+}
+@media (max-width: 500px) {
+  .home .content-section .text-content {
+    width: 100%;
+    padding: 0;
+  }
 }
 .home .content-section .img-content {
   width: 48%;
@@ -232,9 +255,22 @@ nav .links a:hover {
 .home .content-section .img-content img {
   border-radius: 10px;
 }
+@media (max-width: 500px) {
+  .home .content-section .img-content {
+    width: 100%;
+  }
+  .home .content-section .img-content img {
+    width: 100%;
+  }
+}
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
+}
+@media (max-width: 500px) {
+  .home .inverse-content {
+    flex-direction: column-reverse;
+  }
 }
 .home .inverse-content .text-content {
   padding-left: 1%;
@@ -248,6 +284,11 @@ nav .links a:hover {
   width: 75%;
   margin: 0 auto 30px;
 }
+@media (max-width: 500px) {
+  .home .content-destination {
+    width: 100%;
+  }
+}
 .home .content-destination img {
   border-radius: 10px;
 }
@@ -257,7 +298,33 @@ nav .links a:hover {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .home .content-pick {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .home .content-pick .destination {
   width: 30%;
   margin-bottom: 30px;
+}
+@media (max-width: 500px) {
+  .home .content-pick .destination {
+    width: 80%;
+  }
+}
+.home .content-pick .btn {
+  width: 100%;
+}
+.home .content-pick .btn button {
+  width: 100%;
+  height: 50px;
+  background-color: #008080;
+  color: #FFFFFF;
+  border-radius: 18px;
+  font-size: 1.6rem;
+}
+.home .content-pick .btn button:hover {
+  color: #FFEBCD;
+  background: #17A2B8;
 }
