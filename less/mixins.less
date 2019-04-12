@@ -1,1 +1,17 @@
 // Mixins in here
+.box-dimensions(@width, @height) {
+    width: @width;
+    height: @height;
+}
+
+.content-adjust(@justify, @align) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+}
+
+.button-style (@bg-color, @color, @brdr-radius){
+    background-color: @bg-color;
+    color: @color;
+    border-radius: @brdr-radius;
+}

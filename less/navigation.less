@@ -1,1 +1,29 @@
 // Navigation Styles here
+nav{
+    box-sizing: content-box;
+    padding: 0 100%;
+    .box-dimensions(100%, 80px);
+    .content-adjust(space-between, center);
+    border-bottom:2px dashed @silver;
+    .links {
+        width: 40%;
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 1.6rem;
+        a {
+            text-decoration: none;
+            color: @shark;
+            &:hover {
+                color: @eastern-blue;
+            }
+        }
+    }
+    @media @mobile {
+        flex-direction: column;
+        height: 100px;
+        justify-content: space-evenly;
+        .links {
+            width: 100%;
+        }
+    }
+}
